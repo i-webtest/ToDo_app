@@ -45,11 +45,9 @@ export const createForm = () => {
 
   form.append(label, ...buttonsGroup.btns);
   label.append(input);
-  // form.append(...buttonGroup.btns);
 
   return form;
 };
-
 
 export const createTable = () => {
   const tableWrapper = document.createElement('div');
@@ -85,22 +83,14 @@ export const createTable = () => {
 
 export const createRow = (task) => {
   const tr = document.createElement('tr');
-  // if (status === 'Выполнена') {
-  //   tr.classList.add('table-success');
-  // } else {
-  //   tr.classList.add('table-light');
-  // }
 
   const tdId = document.createElement('td');
   tdId.textContent = document.querySelector('tbody').childElementCount + 1;
 
   const tdName = document.createElement('td');
   tdName.textContent = task.name;
-  
-  // if (status === 'Выполнена') tdTask.classList.add('text-decoration-line-through');
 
   const tdStatus = document.createElement('td');
-  // tdStatus.textContent = status;
 
   const tdButtons = document.createElement('td');
 
